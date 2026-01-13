@@ -5,7 +5,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -19,7 +19,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -33,7 +33,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -47,7 +47,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -61,7 +61,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -75,7 +75,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -89,7 +89,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -103,7 +103,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -117,7 +117,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -131,7 +131,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -145,7 +145,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -159,7 +159,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
@@ -173,7 +173,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><title>Site Blocked</title><style>body{font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#f5f5f5;text-align:center;}div{background:white;padding:40px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}</style></head><body><div><h1>🚫 Site Blocked</h1><p>This site is currently blocked for focus.</p><p>Click the extension icon to temporarily unblock.</p></div></body></html>"
+        "extensionPath": "/blocked.html"
       }
     },
     "condition": {
