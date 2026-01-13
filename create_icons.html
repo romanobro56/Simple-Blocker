@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Icons</title>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    // Simple script to generate placeholder icons
+    // Open this file in a browser and check the console for data URLs
+
+    const sizes = [16, 48, 128];
+
+    sizes.forEach(size => {
+      const canvas = document.getElementById('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+
+      // Background
+      ctx.fillStyle = '#2196f3';
+      ctx.fillRect(0, 0, size, size);
+
+      // Draw "X" symbol
+      ctx.strokeStyle = 'white';
+      ctx.lineWidth = size / 8;
+      ctx.lineCap = 'round';
+
+      const margin = size / 4;
+      ctx.beginPath();
+      ctx.moveTo(margin, margin);
+      ctx.lineTo(size - margin, size - margin);
+      ctx.moveTo(size - margin, margin);
+      ctx.lineTo(margin, size - margin);
+      ctx.stroke();
+
+      console.log(`Icon ${size}x${size}:`);
+      console.log(canvas.toDataURL());
+    });
+  </script>
+</body>
+</html>
