@@ -1,12 +1,23 @@
 // Initialize extension state
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.local.set({
+chrome.runtime.onInstalled.addListener(async () => {
+  // Disable any active blocking rules
+  await chrome.declarativeNetRequest.updateEnabledRulesets({
+    disableRulesetIds: ['blocking_rules']
+  });
+
+  // Clear all alarms
+  await chrome.alarms.clearAll();
+
+  // Reset storage state
+  await chrome.storage.local.set({
     isBlocking: false,
     blockingEndTime: null,
     blockingDuration: null,
     blockingElapsed: 0,
+    tempUnblockActive: false,
+    tempUnblockStartTime: null,
     tempUnblockEndTime: null,
-    tempUnblockActive: false
+    tempUnblockDuration: null
   });
 });
 
@@ -54,7 +65,9 @@ async function disableBlocking() {
     blockingDuration: null,
     blockingElapsed: 0,
     tempUnblockActive: false,
-    tempUnblockEndTime: null
+    tempUnblockStartTime: null,
+    tempUnblockEndTime: null,
+    tempUnblockDuration: null
   });
 
   chrome.alarms.clear('endBlocking');
@@ -75,11 +88,15 @@ async function tempUnblock(minutes) {
     disableRulesetIds: ['blocking_rules']
   });
 
-  const tempEndTime = Date.now() + (minutes * 60 * 1000);
+  const now = Date.now();
+  const tempDuration = minutes * 60 * 1000;
+  const tempEndTime = now + tempDuration;
 
   await chrome.storage.local.set({
     tempUnblockActive: true,
+    tempUnblockStartTime: now,
     tempUnblockEndTime: tempEndTime,
+    tempUnblockDuration: tempDuration,
     blockingElapsed: elapsed
   });
 
@@ -107,7 +124,9 @@ async function resumeBlocking() {
 
   await chrome.storage.local.set({
     tempUnblockActive: false,
+    tempUnblockStartTime: null,
     tempUnblockEndTime: null,
+    tempUnblockDuration: null,
     blockingEndTime: newEndTime
   });
 
@@ -115,6 +134,39 @@ async function resumeBlocking() {
   chrome.alarms.create('endBlocking', {
     when: newEndTime
   });
+
+  // Refresh all blocked site tabs
+  refreshBlockedSites();
+}
+
+// Refresh all tabs that are on blocked sites
+async function refreshBlockedSites() {
+  const blockedDomains = [
+    'linkedin.com',
+    'youtube.com',
+    'reddit.com',
+    'instagram.com',
+    'pinterest.com',
+    'x.com',
+    'tiktok.com',
+    'knowyourmeme.com',
+    'facebook.com',
+    'quora.com',
+    'ebay.com',
+    'letterboxd.com',
+    'last.fm'
+  ];
+
+  const tabs = await chrome.tabs.query({});
+
+  for (const tab of tabs) {
+    if (tab.url) {
+      const isBlocked = blockedDomains.some(domain => tab.url.includes(domain));
+      if (isBlocked) {
+        chrome.tabs.reload(tab.id);
+      }
+    }
+  }
 }
 
 // Listen for messages from popup
@@ -136,7 +188,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       'blockingDuration',
       'blockingElapsed',
       'tempUnblockActive',
-      'tempUnblockEndTime'
+      'tempUnblockStartTime',
+      'tempUnblockEndTime',
+      'tempUnblockDuration'
     ], (result) => {
       sendResponse(result);
     });

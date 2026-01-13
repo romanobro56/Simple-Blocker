@@ -36,7 +36,7 @@
     }
 
     #tempProgress {
-      background: #ff9800;
+      background: #7c4dff;
     }
 
     .hidden {
@@ -114,15 +114,14 @@
 
     .arrow {
       font-size: 18px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
       transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    .go-button.animate .arrow:nth-child(1) {
+    .go-button.animate .arrow {
       animation: boost 0.6s ease-out;
-    }
-
-    .go-button.animate .arrow:nth-child(2) {
-      animation: boost 0.6s ease-out 0.1s;
     }
 
     @keyframes boost {
@@ -154,7 +153,7 @@
     }
 
     .status-text.temp-unblock {
-      color: #ff9800;
+      color: #7c4dff;
       font-weight: 500;
     }
 
@@ -208,7 +207,6 @@
       <button class="go-button" id="goButton">
         <span id="buttonText">Go!</span>
         <span class="arrows">
-          <span class="arrow">»</span>
           <span class="arrow">»</span>
         </span>
       </button>

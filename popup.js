@@ -48,7 +48,7 @@ function showUnblockedState() {
 // Blocking state (sites are blocked, timer counting down)
 function showBlockingState(state) {
   buttonText.textContent = 'Unblock';
-  statusText.textContent = 'LinkedIn & YouTube blocked';
+  statusText.textContent = 'Distracting sites blocked';
   statusText.className = 'status-text blocking';
   timerSection.classList.remove('hidden');
   timerLabel.textContent = 'Blocking Time Remaining';
@@ -87,11 +87,7 @@ function showTempUnblockState(state) {
   // Temp progress bar shows temp unblock countdown
   const now = Date.now();
   const tempRemaining = Math.max(0, state.tempUnblockEndTime - now);
-
-  // Calculate temp duration by checking how much time has passed
-  const tempElapsed = now - (state.tempUnblockEndTime - tempRemaining);
-  const tempDuration = tempRemaining + tempElapsed;
-  const tempProgressPercent = (tempRemaining / tempDuration) * 100;
+  const tempProgressPercent = (tempRemaining / state.tempUnblockDuration) * 100;
 
   tempProgress.style.width = `${tempProgressPercent}%`;
 

@@ -6,11 +6,23 @@
   "permissions": [
     "storage",
     "declarativeNetRequest",
-    "alarms"
+    "alarms",
+    "tabs"
   ],
   "host_permissions": [
     "*://*.linkedin.com/*",
-    "*://*.youtube.com/*"
+    "*://*.youtube.com/*",
+    "*://*.reddit.com/*",
+    "*://*.instagram.com/*",
+    "*://*.pinterest.com/*",
+    "*://*.x.com/*",
+    "*://*.tiktok.com/*",
+    "*://*.knowyourmeme.com/*",
+    "*://*.facebook.com/*",
+    "*://*.quora.com/*",
+    "*://*.ebay.com/*",
+    "*://*.letterboxd.com/*",
+    "*://*.last.fm/*"
   ],
   "background": {
     "service_worker": "background.js"
